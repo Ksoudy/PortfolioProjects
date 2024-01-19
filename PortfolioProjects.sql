@@ -1,3 +1,25 @@
+/*
+Portfolio Project: COVID-19 Data Exploration
+
+In this portfolio project, I leverage a range of SQL skills to analyze and explore COVID-19 data. The project involves the use of Joins, CTEs (Common Table Expressions), Temp Tables, Window Functions, Aggregate Functions, and the creation of Views. The entire data querying and storage process is conducted using BigQuery, while Excel is employed for data cleaning.
+
+Skills Utilized:
+- Joins
+- CTEs (Common Table Expressions)
+- Temp Tables
+- Window Functions
+- Aggregate Functions
+- Creating Views
+- Converting Data Types
+
+Tools Used:
+- BigQuery for data querying and storage
+- Excel for data cleaning
+
+Explore with me as we delve into the intricacies of COVID-19 data, unraveling insights through various SQL techniques.
+*/
+
+
 -- Selecting Data to Use 
 Select 
   location, 
