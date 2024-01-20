@@ -1,3 +1,13 @@
+
+/* 
+SQL Data Cleaning: Nashville Housing Project
+
+Tools:
+SQL Server on Docker
+DBeaver connected to SQL Server on Docker for querying and execution.
+*/
+
+
 /* Cleaning Data in SQL */
 SELECT *
 from PortfolioProject.dbo.NashvilleHousingDataForDataCleaning 
