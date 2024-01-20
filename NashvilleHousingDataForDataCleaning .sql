@@ -137,17 +137,18 @@ ORDER by 2
 
 SELECT SoldAsVacant
 , CASE when SoldAsVacant = 'Y' THEN 'Yes'
-		When SoldAsVacant = 'N' THEN 'No'
-		ELSE SoldAsVacant
-		End
+	When SoldAsVacant = 'N' THEN 'No'
+	ELSE SoldAsVacant
+	End
 from NashvilleHousingDataForDataCleaning 
 
 
 UPDATE NashvilleHousingDataForDataCleaning 
-SET SoldAsVacant = CASE when SoldAsVacant = 'Y' THEN 'Yes'
-		When SoldAsVacant = 'N' THEN 'No'
-		ELSE SoldAsVacant
-		End
+SET SoldAsVacant = CASE 
+	when SoldAsVacant = 'Y' THEN 'Yes'
+	When SoldAsVacant = 'N' THEN 'No'
+	ELSE SoldAsVacant
+	End
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -158,13 +159,13 @@ WITH RowNumbCTE as(
 SELECT *,
 	ROW_NUMBER() OVER(
 	PARTITION BY ParcelID,
-				PropertyAddress,
-				SalePrice,
-				SaleDate,
-				LegalReference
-				ORDER BY 
-					UniqueID
-				) row_num
+		PropertyAddress,
+		SalePrice,
+		SaleDate,
+		LegalReference
+		ORDER BY 
+			UniqueID
+			) row_num
 from NashvilleHousingDataForDataCleaning 
 )
 SELECT *
